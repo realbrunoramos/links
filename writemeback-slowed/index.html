@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en"><head>
+<html lang="pt"><head>
 <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
 <title>Bruno Ramos - Write Me Back SLOWED & REVERB</title>
 <meta property="og:title" content="Bruno Ramos - Write Me Back SLOWED & REVERB">
@@ -19,8 +19,9 @@ a.alt{color:#9a9994;font-size:14px}
 <body><main>
 <img src="https://i.ytimg.com/vi/BnWdn1chnDY/maxresdefault.jpg" alt="">
 <h1>Bruno Ramos - Write Me Back SLOWED & REVERB</h1>
-<a class="btn" id="open" href="https://www.youtube.com/watch?v=BnWdn1chnDY">Open in YouTube</a>
-<a class="alt" href="https://www.youtube.com/watch?v=BnWdn1chnDY">Watch in the browser</a>
+<p class="alt" id="hint" style="display:none">Toca no bot√£o para abrir na app</p>
+<a class="btn" id="open" href="https://www.youtube.com/watch?v=BnWdn1chnDY">Abrir na app do YouTube</a>
+<a class="alt" href="https://www.youtube.com/watch?v=BnWdn1chnDY">Ver no browser</a>
 <p class="alt">BRUNO RAMOS<span class="dot">.</span></p>
 </main>
 <script>
@@ -33,7 +34,7 @@ a.alt{color:#9a9994;font-size:14px}
   document.getElementById("open").href = app;
   if (android || ios) {
     window.location.href = app;
-    if (ios) setTimeout(function(){ if (!document.hidden) window.location.href = web; }, 2200);
+    if (ios) document.getElementById("hint").style.display = "block";
   } else {
     window.location.replace(web);
   }
